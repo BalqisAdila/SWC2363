@@ -138,19 +138,19 @@ function calculateTotalCost($destination, $numTravellers, $numDays, $accommodati
 
     <table>
         <tr>
-            <th>Name</th>
+            <th>Traveller Name</th>
             <th>Destination</th>
-            <th>Flight Fare (per person)</th>
-            <th>Daily Expenses (per person)</th>
-            <th>Accommodation Cost (per night per person)</th>
+            <th>No. of Travellers</th>
+            <th>Days</th>
+            <th>Accommodation</th>
             <th>Total Cost</th>
         </tr>
         <tr>
             <td><?php echo htmlspecialchars($name); ?></td>
             <td><?php echo htmlspecialchars($destination); ?></td>
-            <td>RM <?php echo number_format($flightCosts[$destination]); ?></td>
-            <td>RM 50</td>
-            <td>RM <?php echo number_format($accommodationCosts[$accommodationType]); ?></td>
+            <td><?php echo number_format($numTravellers); ?></td>
+            <td><?php echo number_format($numDays); ?></td>
+            <td><?php echo htmlspecialchars($accommodationType); ?></td>
             <td>RM <?php echo number_format($totalCost, 2); ?></td>
         </tr>
     </table>
